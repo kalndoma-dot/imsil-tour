@@ -1,282 +1,283 @@
-   * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+임실여행 통합 이용약관 및 개인정보 처리방침
 
-    body {
-        font-family: var(--font-sans);
-        line-height: 1.6;
-        color: var(--text-main);
-        background-color: var(--bg-color);
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Layout */
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Sidebar / Navigation */
-    nav {
-        background-color: var(--sidebar-bg);
-        border-bottom: 1px solid var(--border-color);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        padding: 1rem;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: var(--text-main);
-        font-weight: 600;
-        font-size: 0.9rem;
-    }
-
-    nav a:hover {
-        color: var(--primary-color);
-    }
-
-    /* Main Content */
-    main {
-        padding: 2rem 1.5rem;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        color: var(--primary-color);
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        border-bottom: 3px solid var(--primary-color);
-        padding-bottom: 0.5rem;
-    }
-
-    h2 {
-        color: var(--primary-color);
-        font-size: 1.5rem;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-    }
-
-    h2::before {
-        content: "";
-        display: inline-block;
-        width: 5px;
-        height: 1.5rem;
-        background-color: var(--primary-color);
-        margin-right: 10px;
-    }
-
-    h3 {
-        font-size: 1.1rem;
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        color: #333;
-    }
-
-    p, li {
-        text-align: justify;
-        margin-bottom: 1rem;
-        color: var(--text-muted);
-    }
-
-    ul, ol {
-        padding-left: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    /* Code/Data Sections */
-    .data-block {
-        background-color: var(--code-bg);
-        font-family: var(--font-mono);
-        padding: 1.25rem;
-        border-radius: 4px;
-        border-left: 4px solid #ccc;
-        margin: 1.5rem 0;
-        font-size: 0.9rem;
-        overflow-x: auto;
-    }
-
-    .data-block p, .data-block li {
-        color: #333;
-        margin-bottom: 0.5rem;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-        font-size: 0.9rem;
-    }
-
-    th, td {
-        border: 1px solid var(--border-color);
-        padding: 10px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f0f0f0;
-        font-weight: 600;
-    }
-
-    /* Footer & Buttons */
-    footer {
-        background-color: #222;
-        color: #fff;
-        padding: 3rem 1.5rem;
-        text-align: center;
-    }
-
-    .btn-call {
-        display: inline-flex;
-        align-items: center;
-        background-color: var(--primary-color);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        margin-top: 1rem;
-        transition: opacity 0.2s;
-    }
-
-    .btn-call:hover {
-        opacity: 0.9;
-    }
-
-    /* Desktop Sidebar Layout */
-    @media (min-width: 1024px) {
-        .wrapper {
-            flex-direction: row;
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="임실여행 서비스 이용약관 및 개인정보 처리방침">
+    <title>임실여행 이용약관 및 개인정보 처리방침</title>
+    <!-- Branding: Typography - Serif for Headings, Sans-serif for Body -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Pretendard:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 1. CSS Variables & Theme (Derived from V-01, V-03) */
+        :root {
+            --primary-color: #1A5D1A; /* Deep Green Header */
+            --accent-bg: #E8F3E8;    /* Light Green Accent */
+            --bg-white: #FFFFFF;
+            --bg-light: #F4F7F4;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-color: #DDE5DD;
+            --focus-ring: #4CAF50;
         }
-        nav {
-            width: 280px;
-            height: 100vh;
+
+        /* 2. Global Reset & Basic Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            word-break: keep-all;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            min-height: 100vh;
+        }
+
+        /* 3. Header Styling (Branding: V-01) */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .brand-logo svg {
+            width: 28px;
+            height: 28px;
+            fill: #FFEB3B; /* Pin color from V-01 */
+        }
+
+        .brand-name {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .doc-header-title {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+
+        /* 4. Sticky Navigation (Accessibility: ARIA role="navigation") */
+        nav[role="navigation"] {
+            display: flex;
+            background: var(--accent-bg);
             position: sticky;
             top: 0;
-            border-bottom: none;
-            border-right: 1px solid var(--border-color);
-            padding: 3rem 1.5rem;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
         }
-        nav ul {
-            flex-direction: column;
-            gap: 15px;
-            text-align: left;
-        }
-        main {
+
+        nav a {
             flex: 1;
-            padding: 3rem 4rem;
-            margin: 0;
+            text-align: center;
+            padding: 16px 10px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
         }
-    }
-</style>
 
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            color: white;
+            outline: none;
+        }
 
-<main>
-    <h1>임실투어(IMSIL TOUR) 법적 고지</h1>
+        nav a:active {
+            background-color: #144514;
+        }
 
-    <!-- Part 1: 서비스 이용약관 -->
-    <section id="tos">
-        <h2>Part 1. 서비스 이용약관</h2>
-        
-        <h3>제1조 (목적)</h3>
-        <p>본 약관은 다맑음(이하 "제공처")이 운영하는 '임실여행' 애플리케이션이 제공하는 관광 정보 검색, 지도 기반 서비스 및 내비게이션 기능의 이용 조건과 관련하여 이용자와 제공처 간의 권리 및 의무를 규정함을 목적으로 합니다.</p>
+        /* 5. Main Content Styling */
+        main {
+            padding: 40px 32px;
+        }
 
-        <h3>제2조 (서비스의 내용)</h3>
-        <p>본 서비스는 임실군의 관광 자원을 효율적으로 안내하기 위해 다음과 같은 기능을 제공합니다.</p>
-        <ul>
-            <li><strong>관광 콘텐츠 제공:</strong> 유적지(임실성당 등), 자연(섬진강, 옥정호 등), 문화, 체험(임실치즈마을 등) 카테고리별 상세 정보 제공.</li>
-            <li><strong>위치 기반 서비스:</strong> 이용자의 현재 GPS 좌표를 활용한 근처 관광지 매핑 및 거리 표시.</li>
-            <li><strong>길 안내 서비스:</strong> 목적지까지의 턴바이턴(Turn-by-turn) 경로 안내, 예상 소요 시간 및 이동 거리 제공.</li>
-            <li><strong>개인화 기능:</strong> 특정 장소의 '저장(관심 목록)' 및 '내 정보' 관리를 통한 맞춤형 경험 제공.</li>
-        </ul>
+        section {
+            margin-bottom: 60px;
+            scroll-margin-top: 80px;
+        }
 
-        <h3>제3조 (정보의 정확성 및 면책)</h3>
-        <div class="data-block">
-            <strong>[Data Accuracy Disclaimer]</strong>
-            <ul>
-                <li>서비스 내 표시되는 운영시간(예: 09-18시), 입장료(예: 무료/유료), 방문자 평점 등은 참고용 데이터이며 실시간 현장 상황에 따라 변동될 수 있습니다.</li>
-                <li>편의시설 정보(주차장, 화장실, 장애인시설, 식당 등)의 가용 여부는 보장하지 않으며, 이용 전 반드시 유선 확인을 권장합니다.</li>
-                <li>내비게이션의 실시간 속도 표시(예: 45km/h)는 GPS 수신 환경에 따라 실제 차량 속도계와 오차가 발생할 수 있습니다. 이용자는 반드시 도로 교통법규와 실제 신호 체계를 우선하여 준수해야 합니다.</li>
-            </ul>
-        </div>
+        /* Legal Precision: Formal Serif Headings */
+        h2 {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 24px;
+        }
 
-        <h3>제4조 (이용자의 의무)</h3>
-        <p>이용자는 '내 정보' 메뉴를 통해 본인의 활동 내역을 관리할 수 있으며, 서비스에서 제공하는 지도 데이터 및 콘텐츠를 무단 복제하거나 상업적으로 재배포할 수 없습니다.</p>
-    </section>
+        h3 {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 1.15rem;
+            margin: 30px 0 12px 0;
+            color: #000;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
 
-    <!-- Part 2: 개인정보 처리방침 -->
-    <section id="privacy">
-        <h2>Part 2. 개인정보 처리방침</h2>
+        p, li {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 14px;
+        }
 
-        <h3>제1조 (수집하는 개인정보 항목)</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>수집 항목</th>
-                    <th>수집 목적</th>
-                    <th>보유 기간</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>실시간 GPS 위치 데이터</td>
-                    <td>지도상 현위치 표시, 내비게이션 경로 안내</td>
-                    <td><strong>6개월 (LBS 로그 데이터)</strong></td>
-                </tr>
-                <tr>
-                    <td>저장한 관광지 목록</td>
-                    <td>사용자 개인별 맞춤형 장소 보관 서비스</td>
-                    <td>회원 탈퇴 시 또는 앱 삭제 시</td>
-                </tr>
-                <tr>
-                    <td>기기 식별 정보</td>
-                    <td>서비스 이용 통계 분석 및 보안 유지</td>
-                    <td>목적 달성 시 즉시 파기</td>
-                </tr>
-            </tbody>
-        </table>
+        ul {
+            padding-left: 24px;
+            list-style-type: square;
+        }
 
-        <h3>제2조 (개인화 데이터 관리)</h3>
-        <p>이용자가 '저장' 버튼을 통해 등록한 관심 관광지 목록은 이용자의 편의를 위해 서버에 동기화되어 저장될 수 있으며, 이는 '내 정보' 메뉴에서 이용자가 직접 삭제하거나 관리할 수 있습니다.</p>
-    </section>
+        /* Disclaimer Box (V-03 Context) */
+        .disclaimer-panel {
+            background-color: #fcfcfc;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 20px 0;
+        }
 
-    <!-- Part 3: 위치기반서비스 특칙 -->
-    <section id="lbs">
-        <h2>Part 3. 위치기반서비스에 관한 특칙</h2>
-        <p>본 서비스는 '위치정보의 보호 및 이용 등에 관한 법률'을 준수하며, 이용자의 개인위치정보를 보호하기 위해 다음과 같은 조치를 취하고 있습니다.</p>
-        
-        <div class="data-block">
-            <strong>[LBS Compliance Metadata]</strong>
-            <p>- 서비스명: 임실여행 위치기반 서비스</p>
-            <p>- 위치정보 관리책임자: 다맑음 (연락처: 하단 지원센터 참고)</p>
-            <p>- 이용자 권리: 이용자는 언제든지 위치정보 수집 및 이용에 대한 동의의 전부 또는 일부를 철회할 수 있으며, 수집 일시 중지를 요청할 수 있습니다.</p>
-            <p>- 보존 근거: 위치정보 이용·제공사실 확인자료는 법률에 따라 6개월간 보관 후 자동 파기됩니다.</p>
-        </div>
-    </section>
+        .disclaimer-panel strong {
+            color: #d32f2f;
+            display: block;
+            margin-bottom: 8px;
+        }
 
-    <!-- Part 4: 고객 지원 -->
-    <section id="support">
-        <h2>Part 4. 고객 지원 및 문의</h2>
-        <p>서비스 이용 중 발생하는 기술적 문제나 데이터 수정 요청은 아래의 연락처로 문의해 주시기 바랍니다.</p>
-        <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-            <p><strong>제공처:</strong> 다맑음 (Imsil-gun)</p>
-            <p><strong>주소:</strong> 전북특별자치도 임실군 청운로 275</p>
-            <a href="tel:010-2223-8504" class="btn-call">📞 임실여행 고객센터 전화 연결</a>
-        </div>
-    </section>
-</main>
+        /* 6. Footer Styling */
+        footer {
+            background-color: #f9f9f9;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: left;
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .footer-info p {
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            main { padding: 30px 20px; }
+            .doc-header-title { font-size: 1.4rem; }
+            nav a { font-size: 0.8rem; padding: 12px 5px; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header: Branding & Identity (V-01) -->
+        <header role="banner">
+            <div class="brand-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span class="brand-name">임실여행 IMSIL TOUR</span>
+            </div>
+            <h1 class="doc-header-title">통합 이용약관 및 정책</h1>
+        </header>
+
+        <!-- Navigation: ARIA Accessible Anchors -->
+        <nav role="navigation" aria-label="약관 목차">
+            <a href="#tourist-terms">관광 서비스</a>
+            <a href="#location-terms">위치기반 서비스</a>
+            <a href="#privacy-policy">개인정보 처리방침</a>
+        </nav>
+
+        <main role="main">
+            <!-- Section 4: Tourist Information Terms (V-01, V-02, V-03) -->
+            <section id="tourist-terms" aria-labelledby="heading-tourist">
+                <h2 id="heading-tourist">제1장 관광 정보 서비스 이용약관</h2>
+                <h3>제1조 (목적 및 서비스 정의)</h3>
+                <p>본 약관은 '임실여행' 애플리케이션이 제공하는 전북 임실군 내 주요 관광지(임실성당, 섬진강, 임실치즈마을, 오수공원, 옥정호 등)에 대한 정보 제공 및 관련 부가 서비스의 이용 조건을 규정합니다.</p>
+                
+                <h3>제2조 (정보 제공 항목 및 면책 조항)</h3>
+                <p>본 서비스는 사용자의 편의를 위해 관광지별 상세 데이터를 제공합니다. 단, 수집되는 데이터의 실시간 특성에 따라 다음 사항에 대해 면책됩니다.</p>
+                <div class="disclaimer-panel">
+                    <strong>[데이터 정확성에 관한 면책 고지]</strong>
+                    <ul>
+                        <li>제공 정보: 방문자 평점(예: 4.9점), 운영시간(예: 09:00~18:00), 입장료 정보(무료/유료 여부).</li>
+                        <li>편의시설 정보: 주차장 확보 여부, 화장실 위치, 장애인 편의시설, 인근 식당 정보(V-03 기반).</li>
+                        <li>면책 사항: 위 정보는 외부 API 및 공공 데이터를 실시간으로 반영하므로 실제 현장 상황과 상이할 수 있습니다. '임실여행'은 정보의 신뢰도 확보에 최선을 다하나, 실제 데이터 불일치로 인한 이용자의 주관적 손해에 대해서는 법적 책임을 지지 않습니다.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 5: Location-based Services (V-02, V-04) -->
+            <section id="location-terms" aria-labelledby="heading-location">
+                <h2 id="heading-location">제2장 위치 기반 서비스 이용 약관</h2>
+                <h3>제1조 (개인위치정보의 처리 및 활용)</h3>
+                <p>'임실여행'은 이용자의 스마트기기 내 Global Positioning System(GPS) 좌표를 수집 및 가공하여 다음과 같은 실시간 위치 기반 서비스를 제공합니다.</p>
+                <ul>
+                    <li><strong>주변 관광지 추천:</strong> 현재 위치 기준 반경 내 '근처 관광지 5곳' 자동 매칭 및 거리(km) 표시.</li>
+                    <li><strong>실시간 길안내:</strong> 선택한 목적지(예: 임실치즈마을 주차장)까지의 최적 경로 산출 및 안내.</li>
+                </ul>
+
+                <h3>제2조 (내비게이션 텔레메트리 데이터 처리)</h3>
+                <p>길안내(내비게이션) 기능 수행 시, 정확한 경로 계산과 사용자 안전을 위해 다음과 같은 실시간 주행 데이터를 처리합니다 (V-04 기반).</p>
+                <ul>
+                    <li><strong>실시간 주행 속도(Speed):</strong> km/h 단위의 이동 속도 측정.</li>
+                    <li><strong>경로 분석 데이터:</strong> 목적지까지의 남은 시간(min), 남은 거리(km) 및 경로 이탈 시 재탐색 로직.</li>
+                    <li><strong>조작 안내 정보:</strong> 좌회전, 우회전, 직진 등 특정 도로(예: 임실로, 치즈마을로) 진입을 위한 실시간 매뉴버(Maneuver) 데이터.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6: Privacy Policy (V-01) -->
+            <section id="privacy-policy" aria-labelledby="heading-privacy">
+                <h2 id="heading-privacy">제3장 개인정보 처리방침</h2>
+                <h3>제1조 (수집 항목 및 이용 목적)</h3>
+                <p>'임실여행'은 원활한 사용자 경험 제공을 위해 하단 탭 메뉴(V-01) 기반의 다음 데이터를 수집합니다.</p>
+                <ul>
+                    <li><strong>저장(찜) 리스트:</strong> 사용자가 관심 관광지를 선별하여 저장한 개별 선호 리스트 관리.</li>
+                    <li><strong>내 정보(My Info):</strong> 사용자 맞춤형 인터페이스 설정을 위한 프로필 및 앱 서비스 커스터마이징 데이터.</li>
+                </ul>
+
+                <h3>제2조 (개인정보의 보유 및 파기)</h3>
+                <p>원칙적으로 사용자의 데이터는 서비스 회원 탈퇴 시 또는 데이터 삭제 요청 시 즉시 파기됩니다. 단, 다음의 경우 관련 법령에 의거하여 명시된 기간 동안 보관합니다.</p>
+                <ul>
+                    <li>소비자의 불만 또는 분쟁처리에 관한 기록: 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+                    <li>서비스 접속 기록(로그): 3개월 (통신비밀보호법)</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Section 7: Footer Information -->
+        <footer role="contentinfo">
+            <div class="footer-info">
+                <p><strong>시행 일자:</strong> 2026년 2월 23일</p>
+                <p><strong>개인정보 보호책임자:</strong> 임실여행 시스템운영팀</p>
+                <p><strong>고객센터:</strong> kalndoma@gmail.com</p>
+                <p style="margin-top: 20px;">&copy; 2024 IMSIL TOUR. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Branding: Primary Green applied for Legal Authority & Compliance -->
+</body>
+</html>
